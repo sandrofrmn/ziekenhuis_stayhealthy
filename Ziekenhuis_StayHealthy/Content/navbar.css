@@ -1,0 +1,90 @@
+﻿@font-face {
+    font-family: 'Lato-Bold';
+    src: url('../fonts/Muli/Lato-Bold.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Muli-SemiBold';
+    src: url('../fonts/Lato/Muli-SemiBold.ttf') format('truetype');
+}
+
+body {
+    font-family: Lato-Bold;
+}
+
+.nav-container {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    left: 0px;
+    top: 0px;
+    background: #F3F9FC;
+}
+
+nav {
+    position: absolute; 
+    display: flex;
+    align-items: center;
+    height: 100px;
+    margin-left: 200px;
+    text-decoration: none;
+
+}
+
+    nav ul{
+        display: flex;
+    }
+
+.nav-items-wrapper{
+    margin-left: 400px;
+}
+
+.nav-items li {
+    list-style-type: none;
+    align-items: center;
+    padding-right: 50px;
+}
+
+    .nav-items li:nth-last-of-type(1) {
+        margin: 0;
+    }
+
+    .nav-items li a {
+        font-family: Muli-SemiBold;
+        font-size: 20px;
+        text-decoration-line: none;
+        color: black;
+        font-weight: 500;   
+    }
+
+.logo a {
+    text-decoration-line: none;
+    font-size: 24px;
+    color: black;
+    font-weight: 300;
+}
+
+.right-nav-items li{
+    list-style-type: none;
+    margin-left: 300px;
+}
+
+.right-nav-items button {
+    font-family: Muli-SemiBold; 
+    font-weight: 300;
+    font-size: 18px;
+    color: white;
+    width: 185px;
+    height: 48px;
+    background: radial-gradient(97.03% 401.52% at 98.65% 14.58%, #49B1EB 0%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%), #3C579B;
+    border-radius: 15px;
+}
+
+    .right-nav-items button:focus {
+        outline: none
+    }
+
+    .right-nav-items button:hover {
+        border-radius: 15px;
+        background-color: black;
+    }
