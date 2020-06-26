@@ -29,5 +29,7 @@ namespace Ziekenhuis_StayHealthy.Models
         {
             return new ApplicationDbContext();
         }
+
+        public System.Data.Entity.DbSet<Ziekenhuis_StayHealthy.Models.Patient> Patients { get; set; }
     }
 }

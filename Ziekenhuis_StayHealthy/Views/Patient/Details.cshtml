@@ -1,0 +1,74 @@
+﻿@model Ziekenhuis_StayHealthy.Models.Patient
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Patient</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Voornaam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Voornaam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Achternaam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Achternaam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Adres)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Adres)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Geboortedatum)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Geboortedatum)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Telefoonnummer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Telefoonnummer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Afdeling_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Afdeling_ID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Kamer_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Kamer_ID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Patiënt_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
