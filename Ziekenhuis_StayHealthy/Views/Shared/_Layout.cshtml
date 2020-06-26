@@ -33,12 +33,16 @@
                         <li>
                             <a href="/home/Index">Contact</a>
                         </li>
+                        <li>@Html.ActionLink("Patient", "Index", "Patient")</li>
+                        <li>@Html.ActionLink("Afdeling", "Index", "Afdeling")</li>
+                        <li>@Html.ActionLink("Kamer", "Index", "Kamer")</li>
+                        <li>@Html.ActionLink("Medicatie", "Index", "Medicatie")</li>
                     </ul>
                 </div>  
 
                 <ul class="right-nav-items">
                     <li>
-                        <button onclick="location.href=' @Url.Action("Index", "home")';">Login</button>
+                        <button onclick="location.href=' @Url.Action("Login", "Account")';">Login</button>
                     </li>
                 </ul>
 

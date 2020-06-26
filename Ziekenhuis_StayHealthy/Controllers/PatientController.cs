@@ -46,7 +46,7 @@ namespace Ziekenhuis_StayHealthy.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "Patiënt_ID,Voornaam,Achternaam,Adres,Geboortedatum,Telefoonnummer,Afdeling_ID,Kamer_ID")] Patient patient)
+        public ActionResult Create([Bind(Include = "Patiënt_ID,Voornaam,Achternaam,Adres,Geboortedatum,Telefoonnummer,Afdeling_ID,Kamer_ID,Gearchiveerd")] Patient patient)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace Ziekenhuis_StayHealthy.Controllers
         // more details see https://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "Patiënt_ID,Voornaam,Achternaam,Adres,Geboortedatum,Telefoonnummer,Afdeling_ID,Kamer_ID")] Patient patient)
+        public ActionResult Edit([Bind(Include = "Patiënt_ID,Voornaam,Achternaam,Adres,Geboortedatum,Telefoonnummer,Afdeling_ID,Kamer_ID,Gearchiveerd")] Patient patient)
         {
             if (ModelState.IsValid)
             {
@@ -115,6 +115,11 @@ namespace Ziekenhuis_StayHealthy.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult Interface()
+        {
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
@@ -123,5 +128,6 @@ namespace Ziekenhuis_StayHealthy.Controllers
             }
             base.Dispose(disposing);
         }
+
     }
 }

@@ -6,10 +6,6 @@
 
 <h2>Create</h2>
 
-<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
-<link rel="stylesheet" href="/resources/demos/style.css">
-<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 
 @using (Html.BeginForm())
 {
@@ -76,6 +72,16 @@
         </div>
 
         <div class="form-group">
+            @Html.LabelFor(model => model.Gearchiveerd, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                <div class="checkbox">
+                    @Html.EditorFor(model => model.Gearchiveerd)
+                    @Html.ValidationMessageFor(model => model.Gearchiveerd, "", new { @class = "text-danger" })
+                </div>
+            </div>
+        </div>
+
+        <div class="form-group">
             <div class="col-md-offset-2 col-md-10">
                 <input type="submit" value="Create" class="btn btn-default" />
             </div>
@@ -95,7 +101,10 @@
                 dateFormat: 'yy-mm-dd',
                 changeYear: true,
                 yearRange: "1920:@DateTime.Now.Year",
-                changeMonth: true
+                changeMonth: true,
+                firstDay: 1,
+                defaultDate: '1970-1-1'
+                
             }).val();
         })
     </script>
