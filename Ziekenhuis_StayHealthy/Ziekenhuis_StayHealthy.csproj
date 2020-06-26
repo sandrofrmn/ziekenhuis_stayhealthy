@@ -246,6 +246,10 @@
     <Content Include="Content\Site.css" />
     <Content Include="Images\navbar\logoGroot.png" />
     <Content Include="Images\navbar\logoMiddel.png" />
+    <Content Include="Images\voorpagina\boxIcons\ bell.png" />
+    <Content Include="Images\voorpagina\boxIcons\ cross.png" />
+    <Content Include="Images\voorpagina\boxIcons\ shield-ok.png" />
+    <Content Include="Images\voorpagina\Doctor.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="fonts\Muli\Muli-Regular.ttf" />
