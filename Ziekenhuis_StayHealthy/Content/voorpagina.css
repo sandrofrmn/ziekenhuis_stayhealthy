@@ -1,0 +1,45 @@
+﻿@font-face {
+    font-family: 'Muli-Regular';
+    src: url('../fonts/Muli/Muli-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Muli-SemiBold';
+    src: url('../fonts/Muli/Muli-SemiBold.ttf') format('truetype');
+}
+
+
+body {
+    margin-top: 200px;   
+    font-family: Muli-SemiBold;
+}
+
+.background-shape {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    left: 0;
+    height: 560px;
+    background: #F3F9FC;
+    border-radius: 0px 0px 280px 280px;
+}
+
+.wrapper-top {
+    margin-top: 50px;
+    margin-left: 200px;
+}
+
+.top-welcome {
+    color: #3C579B;
+}
+
+.top-title {
+    color: #373F41;
+    font-weight: 700;
+    margin-left: 30px;
+    letter-spacing: 0.3px;
+}
+
+.top-description {
+    color: #737B7D;
+}

@@ -213,3 +213,4 @@ C:\Users\tonit\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\ob
 C:\Users\tonit\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\obj\Debug\Ziekenhuis_StayHealthy.csproj.CopyComplete
 C:\Users\tonit\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\obj\Debug\Ziekenhuis_StayHealthy.dll
 C:\Users\tonit\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\obj\Debug\Ziekenhuis_StayHealthy.pdb
+C:\Users\tonit\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\obj\Debug\Ziekenhuis_StayHealthy.csprojAssemblyReference.cache
