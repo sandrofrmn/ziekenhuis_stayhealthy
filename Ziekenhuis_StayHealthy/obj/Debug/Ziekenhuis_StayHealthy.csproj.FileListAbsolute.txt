@@ -209,7 +209,6 @@ C:\Users\tonit\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\bi
 C:\Users\tonit\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\tonit\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\tonit\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\tonit\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\obj\Debug\Ziekenhuis_StayHealthy.csprojAssemblyReference.cache
 C:\Users\tonit\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\obj\Debug\Ziekenhuis_StayHealthy.csproj.CoreCompileInputs.cache
 C:\Users\tonit\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\obj\Debug\Ziekenhuis_StayHealthy.csproj.CopyComplete
 C:\Users\tonit\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\obj\Debug\Ziekenhuis_StayHealthy.dll

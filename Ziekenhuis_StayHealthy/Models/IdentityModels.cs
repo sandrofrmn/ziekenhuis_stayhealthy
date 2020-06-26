@@ -31,5 +31,13 @@ namespace Ziekenhuis_StayHealthy.Models
         }
 
         public System.Data.Entity.DbSet<Ziekenhuis_StayHealthy.Models.Patient> Patients { get; set; }
+
+        public System.Data.Entity.DbSet<Ziekenhuis_StayHealthy.Models.Afdeling> Afdelings { get; set; }
+
+        public System.Data.Entity.DbSet<Ziekenhuis_StayHealthy.Models.Kamer> Kamers { get; set; }
+
+        public System.Data.Entity.DbSet<Ziekenhuis_StayHealthy.Models.Medicatie> Medicaties { get; set; }
+
+        public System.Data.Entity.DbSet<Ziekenhuis_StayHealthy.Models.Zorgverlener> Zorgverleners { get; set; }
     }
 }

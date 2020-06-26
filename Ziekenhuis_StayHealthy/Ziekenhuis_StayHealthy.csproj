@@ -170,17 +170,25 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\AfdelingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\KamerController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Controllers\MedicatieController.cs" />
     <Compile Include="Controllers\PatientController.cs" />
+    <Compile Include="Controllers\ZorgverlenerController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\Afdeling.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\Kamer.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Medicatie.cs" />
     <Compile Include="Models\Patient.cs" />
     <Compile Include="Models\PatientEDM.cs" />
+    <Compile Include="Models\Zorgverlener.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -294,6 +302,26 @@
     <Content Include="Views\Patient\Details.cshtml" />
     <Content Include="Views\Patient\Edit.cshtml" />
     <Content Include="Views\Patient\Index.cshtml" />
+    <Content Include="Views\Afdeling\Create.cshtml" />
+    <Content Include="Views\Afdeling\Delete.cshtml" />
+    <Content Include="Views\Afdeling\Details.cshtml" />
+    <Content Include="Views\Afdeling\Edit.cshtml" />
+    <Content Include="Views\Afdeling\Index.cshtml" />
+    <Content Include="Views\Kamer\Create.cshtml" />
+    <Content Include="Views\Kamer\Delete.cshtml" />
+    <Content Include="Views\Kamer\Details.cshtml" />
+    <Content Include="Views\Kamer\Edit.cshtml" />
+    <Content Include="Views\Kamer\Index.cshtml" />
+    <Content Include="Views\Medicatie\Create.cshtml" />
+    <Content Include="Views\Medicatie\Delete.cshtml" />
+    <Content Include="Views\Medicatie\Details.cshtml" />
+    <Content Include="Views\Medicatie\Edit.cshtml" />
+    <Content Include="Views\Medicatie\Index.cshtml" />
+    <Content Include="Views\Zorgverlener\Create.cshtml" />
+    <Content Include="Views\Zorgverlener\Delete.cshtml" />
+    <Content Include="Views\Zorgverlener\Details.cshtml" />
+    <Content Include="Views\Zorgverlener\Edit.cshtml" />
+    <Content Include="Views\Zorgverlener\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
