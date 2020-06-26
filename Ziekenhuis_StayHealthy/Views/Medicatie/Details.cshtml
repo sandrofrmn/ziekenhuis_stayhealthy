@@ -1,0 +1,50 @@
+﻿@model Ziekenhuis_StayHealthy.Models.Medicatie
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Medicatie</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Naam)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Naam)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Merk)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Merk)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Dosis)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Dosis)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Patient_ID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Patient_ID)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Medicatie_ID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
