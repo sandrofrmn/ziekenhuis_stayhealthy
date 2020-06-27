@@ -173,6 +173,7 @@
     <Compile Include="Controllers\AfdelingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KamerController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MedicatieController.cs" />
     <Compile Include="Controllers\PatientController.cs" />
@@ -197,6 +198,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\loginpagina.css" />
     <Content Include="Content\navbar.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
@@ -244,6 +246,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\loginpagina\background.jpg" />
+    <Content Include="Images\loginpagina\background.png" />
+    <Content Include="Images\loginpagina\backgroundSmall.png" />
+    <Content Include="Images\loginpagina\Logo.png" />
     <Content Include="Images\navbar\logoGroot.png" />
     <Content Include="Images\navbar\logoMiddel.png" />
     <Content Include="Images\voorpagina\boxIcons\ bell.png" />
@@ -327,6 +333,7 @@
     <Content Include="Views\Zorgverlener\Details.cshtml" />
     <Content Include="Views\Zorgverlener\Edit.cshtml" />
     <Content Include="Views\Zorgverlener\Index.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
