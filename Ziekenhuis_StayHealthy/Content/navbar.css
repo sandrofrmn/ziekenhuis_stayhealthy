@@ -95,3 +95,8 @@ nav {
         border-radius: 15px;
         background-color: black;
     }
+
+.logged-in{
+    float:right;
+    margin-top:12px;
+}

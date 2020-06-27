@@ -40,10 +40,24 @@
 
             </nav>
             <ul class="right-nav-items">
-                <li>
-                    <button onclick="location.href=' @Url.Action("Index", "home")';">Login</button>
-                </li>
-            </ul>
+                @if (Session["user"] == null)
+                {
+                    <li>
+                        <button onclick="location.href=' @Url.Action("Login", "Login")';">Login</button>
+                    </li>
+                }
+                else
+                {
+
+                    <li>
+                        <button onclick="location.href=' @Url.Action("LogOut", "Login")';">Uitloggen</button>
+                    </li>
+
+                    <li>
+                        <a class="logged-in">Ingelogd: @Session["user"].ToString()</a>
+                    </li>
+                }
+                </ul>
         </div>
 
 

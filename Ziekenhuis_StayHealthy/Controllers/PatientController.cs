@@ -115,6 +115,12 @@ namespace Ziekenhuis_StayHealthy.Controllers
             return RedirectToAction("Index");
         }
 
+        // GET: Login
+        public ActionResult DashboardPatient()
+        {
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)
