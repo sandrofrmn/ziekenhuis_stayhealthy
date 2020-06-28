@@ -25,21 +25,21 @@
                         <a href="/home/Index">Home</a>
                     </li>
                     @*
-        Controle welke user is ingelogd + welke rol deze user heeft gekregen
-        @if (Session["user"] != null)
-        {
-            <li>
+                        Controle welke user is ingelogd + welke rol deze user heeft gekregen
+                        @if (Session["user"] != null)
+                        {
+                            <li>
 
-                <a>@Session["user"].ToString()</a>
-            </li>
-        }
+                                <a>@Session["user"].ToString()</a>
+                            </li>
+                        }
 
-        @if (Session["function"] != null)
-        {
-            <li>
+                        @if (Session["function"] != null)
+                        {
+                            <li>
 
-                <a>@Session["function"].ToString()</a>
-            </li>
+                                <a>@Session["function"].ToString()</a>
+                            </li>
 
                     *@
                     @if (Session["function"] == null)
