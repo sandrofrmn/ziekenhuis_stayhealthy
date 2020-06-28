@@ -1,3 +1,65 @@
 ﻿@{
     ViewBag.Title = "Home Page";
 }
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/voorpagina.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Voorpagina</title>
+</head>
+
+<body>
+    <div class="background-shape">
+        <img src="~/Images/voorpagina/Doctor.png" class="dokter-image" />
+        <div class="wrapper-top">
+            <a class="top-welcome">Welkom op onze site</a>
+            <h1 class="top-title">
+                Bekijk nu online je gegevens en <br />
+                verbeter je zorgdiensten
+            </h1>
+            <a class="top-description">
+                Deze website wilt u helpen uw zorgdiensten te verbeteren. Ook gaat deze website u helpen als <br />
+                patiënt. Bekijk al uw eigen informatie en de status van alle procedures. Om gebruik te maken<br />
+                van deze website moet u eerst contact opnemen met ons en uw zorginstelling.
+            </a>
+            <br />
+
+            <button class="contact-button"onclick="location.href=' @Url.Action("Index", "home")';">Neem Contact op</button>
+        </div>
+    </div>
+
+    
+    <div class="wrapper-bottom">
+
+        <div class="box">
+            <img src="~/Images/voorpagina/boxIcons/ shield-ok.png" /><br />
+            <a class="box-title">Veiligheid</a><br />
+            <a class="box-desc">Binnen de zorg is het natuurlijk belangrijk dat jouw <br />gegevens beveiligd en beschermt zijn. Wij vinden <br />dat beveiliging belangrijk is. Ontdek hoe wij jouw <br />persoonsgegevens beschermen
+                </a><br />
+            <a href="/home/Index" class="box-link">Ontdek</a>
+        </div>
+        <div class="box">
+            <img src="~/Images/voorpagina/boxIcons/ bell.png" /><br />
+            <a class="box-title">COVID-19 maatregelen</a><br />
+            <a class="box-desc">
+                Voor meer info over onze maatregelen tegen <br />covid-19 bekijk de veelgestelde vragen pagina.<br /> Samen staan we sterk tegen covid-19.
+            </a><br />
+            <a href="/home/Index" class="box-link">Bezoek</a>
+        </div>
+        <div class="box">
+            <img src="~/Images/voorpagina/boxIcons/ cross.png" /><br />
+            <a class="box-title">Zorg</a><br />
+            <a class="box-desc">
+                Het team staat 24/7 paraat om de beste zorg te <br /> leveren. Wij gaan uw ervaring met onze zorg<br /> verbeteren doormiddel van onze website
+            </a><br />
+            <a href="/home/Index" class="box-link">Zorg</a>
+        </div>
+    </div>
+
+</body>
+
+</html>
+

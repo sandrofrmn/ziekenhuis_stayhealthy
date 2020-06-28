@@ -120,6 +120,11 @@ namespace Ziekenhuis_StayHealthy.Controllers
             return View();
         }
 
+        public ActionResult DashboardPatient()
+        {
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

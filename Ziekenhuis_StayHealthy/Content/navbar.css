@@ -1,11 +1,11 @@
 ﻿@font-face {
     font-family: 'Lato-Bold';
-    src: url('../fonts/Muli/Lato-Bold.ttf') format('truetype');
+    src: url('../fonts/Lato/Lato-Bold.ttf') format('truetype');
 }
 
 @font-face {
     font-family: 'Muli-SemiBold';
-    src: url('../fonts/Lato/Muli-SemiBold.ttf') format('truetype');
+    src: url('../fonts/Muli/Muli-SemiBold.ttf') format('truetype');
 }
 
 body {
@@ -68,9 +68,12 @@ nav {
     font-weight: 300;
 }
 
-.right-nav-items li{
+
+.right-nav-items li{    
     list-style-type: none;
-    margin-left: 350px;
+    float:right;
+    margin-right: 50px; 
+    margin-top: 10px;
 }
 
 .right-nav-items button {
@@ -92,3 +95,8 @@ nav {
         border-radius: 15px;
         background-color: black;
     }
+
+.logged-in{
+    float:right;
+    margin-top:12px;
+}

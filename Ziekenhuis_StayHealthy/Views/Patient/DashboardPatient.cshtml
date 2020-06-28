@@ -1,0 +1,51 @@
+﻿@model Ziekenhuis_StayHealthy.Models.Patient
+
+@{
+    ViewBag.Title = "DashboardPatient";
+    if (Session["function"].ToString() != "patient")
+    {
+        Response.Redirect("~/Home/index");
+    }
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/DashboardPatient.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Dashboard-Patient</title>
+</head>
+
+<body>
+    <div class="box-container">
+            <div class="box" id="gegevens-box">
+                <a class="box-desc">Mijn gegevens</a>
+            </div>
+            <div class="box" id="licht-box">
+                <a class="box-desc">Licht bedienen</a>
+            </div>
+            <div class="box" id="gordijn-box">
+                <a class="box-desc">Gordijnen bedienen</a>
+            </div>
+            <div class="box" id="media-box">
+                <a class="box-desc">Media bedienen</a>
+            </div>
+            <div class="box" id="eten-box">
+                <a class="box-desc">Eten aanvragen</a>
+            </div>
+            <div class="box" id="temperatuur-box">
+                <a class="box-desc">Hulp vragen</a>
+            </div>
+
+        <div class="lower-box">
+
+        </div>
+    </div>
+
+</body>
+
+</html>
+
+
+
