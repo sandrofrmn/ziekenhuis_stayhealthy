@@ -189,7 +189,6 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Medicatie.cs" />
     <Compile Include="Models\Patient.cs" />
-    <Compile Include="Models\PatientEDM.cs" />
     <Compile Include="Models\User.cs" />
     <Compile Include="Models\Zorgverlener.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
