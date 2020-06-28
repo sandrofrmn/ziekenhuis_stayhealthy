@@ -13,17 +13,37 @@
 </head>
 <body>
     <div class="nav-container">
-            <nav>
-                <div class="logo">
-                    <img src="~/Images/navbar/logoMiddel.png" width="30" height="30" style="float: left;"/>
-                    <a href="/home/Index" style="float:right;">STAYHEALTHY</a>
-                </div>
+        <nav>
+            <div class="logo">
+                <img src="~/Images/navbar/logoMiddel.png" width="30" height="30" style="float: left;" />
+                <a href="/home/Index" style="float:right;">STAYHEALTHY</a>
+            </div>
 
-                <div class="nav-items-wrapper">
-                    <ul class="nav-items">
+            <div class="nav-items-wrapper">
+                <ul class="nav-items">
+                    <li>
+                        <a href="/home/Index">Home</a>
+                    </li>
+                    @*
+                    Controle welke user is ingelogd + welke rol deze user heeft gekregen
+                    @if (Session["user"] != null)
+                    {
                         <li>
-                            <a href="/home/Index">Home</a>
+
+                            <a>@Session["user"].ToString()</a>
                         </li>
+                    }
+
+                    @if (Session["function"] != null)
+                    {
+                        <li>
+
+                            <a>@Session["function"].ToString()</a>
+                        </li>
+                    }
+                    *@)
+                    @if (Session["function"] == null)
+                    {
                         <li>
                             <a href="/home/Index">Services</a>
                         </li>
@@ -33,32 +53,60 @@
                         <li>
                             <a href="/home/Index">Contact</a>
                         </li>
-                    </ul>
-                </div>  
+                    }
+                    else if (Session["function"].ToString() == "patient")
+                    {
+                        <li>
+                            <a href="/Patient/DashboardPatient">Dashboard</a>
+                        </li>
+                    }
+                    else if (Session["function"].ToString() == "admin")
+                    {
+                        <li>
+                            <a href="/home/Index">Dashboard</a>
+                        </li>
+                    }
+                    else if (Session["function"].ToString() == "zorgverlener")
+                    {
+                        <li>
+                            <a href="/home/Index">Dashboard</a>
+                        </li>
+                    }
+                </ul>
+            </div>
 
-                
 
-            </nav>
-            <ul class="right-nav-items">
-                @if (Session["user"] == null)
+
+        </nav>
+        <ul class="right-nav-items">
+            @if (Session["function"] == null)
+            {
+                <li>
+                    <button onclick="location.href=' @Url.Action("Login", "Login")';">Login</button>
+                </li>
+            }
+            else
+            {
+
+                <li>
+                    <button onclick="location.href=' @Url.Action("LogOut", "Login")';">Uitloggen</button>
+                </li>
+
+                if (Session["user"] != null)
                 {
-                    <li>
-                        <button onclick="location.href=' @Url.Action("Login", "Login")';">Login</button>
-                    </li>
-                }
-                else
-                {
-
-                    <li>
-                        <button onclick="location.href=' @Url.Action("LogOut", "Login")';">Uitloggen</button>
-                    </li>
-
                     <li>
                         <a class="logged-in">Ingelogd: @Session["user"].ToString()</a>
                     </li>
                 }
-                </ul>
-        </div>
+                else
+                {
+                    <li>
+                        <a class="logged-in">Ingelogd: @Session["function"].ToString()</a>
+                    </li>
+                }
+            }
+        </ul>
+    </div>
 
 
     <div class="container body-content">

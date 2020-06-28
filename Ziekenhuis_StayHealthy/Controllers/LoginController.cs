@@ -18,7 +18,16 @@ namespace Ziekenhuis_StayHealthy.Controllers
         [HttpPost]
         public ActionResult Authorize(User user)
         {
-            Session["user"] = user.name;
+
+            if (user.name == "admin" || user.name == "zorgverlener")
+            {
+                Session["function"] = user.name;
+            }
+            else
+            {
+                Session["user"] = user.name;
+                Session["function"] = "patient";
+            }
             return RedirectToAction("Index", "home");
         }
 

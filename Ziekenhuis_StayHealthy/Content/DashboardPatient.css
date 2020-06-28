@@ -1,0 +1,31 @@
+﻿body {
+    margin-left: 300px;
+    margin-right: 300px;
+}
+
+.box-container {
+    display: grid;
+    grid-template-columns: 250px 250px 250px;
+    grid-template-rows: 250px 250px 250px;
+    margin-top: 10%;
+    margin-left: 180px;
+    width: 100%;
+    text-align: center;
+    column-gap: 40px;
+}
+
+.box {
+    margin: 40px;
+    width: 250px;
+    height: 200px;
+    box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background: linear-gradient(231.58deg, rgba(255, 255, 255, 0.75) 0%, rgba(0, 0, 0, 0) 98.27%), #24FF00;
+}
+
+.box-desc{
+    font-size: 30px;
+    color: white;
+}
+
+
