@@ -34,5 +34,7 @@ namespace Ziekenhuis_StayHealthy.Models
         public int? Afdeling_ID { get; set; }
 
         public int? Kamer_ID { get; set; }
+
+        public bool? Gearchiveerd { get; set; }
     }
 }

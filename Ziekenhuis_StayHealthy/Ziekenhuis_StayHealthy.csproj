@@ -173,10 +173,12 @@
     <Compile Include="Controllers\AfdelingController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KamerController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Controllers\MedicatieController.cs" />
     <Compile Include="Controllers\PatientController.cs" />
     <Compile Include="Controllers\ZorgverlenerController.cs" />
+    <Compile Include="DomoticzAPI.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -187,7 +189,7 @@
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Models\Medicatie.cs" />
     <Compile Include="Models\Patient.cs" />
-    <Compile Include="Models\PatientEDM.cs" />
+    <Compile Include="Models\User.cs" />
     <Compile Include="Models\Zorgverlener.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -197,6 +199,9 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\Interface.css" />
+    <Content Include="Content\DashboardPatient.css" />
+    <Content Include="Content\loginpagina.css" />
     <Content Include="Content\navbar.css" />
     <Content Include="Content\themes\base\accordion.css" />
     <Content Include="Content\themes\base\all.css" />
@@ -239,17 +244,26 @@
     <Content Include="Content\themes\base\tabs.css" />
     <Content Include="Content\themes\base\theme.css" />
     <Content Include="Content\themes\base\tooltip.css" />
+    <Content Include="Content\voorpagina.css" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\loginpagina\background.jpg" />
+    <Content Include="Images\loginpagina\background.png" />
+    <Content Include="Images\loginpagina\backgroundSmall.png" />
+    <Content Include="Images\loginpagina\Logo.png" />
     <Content Include="Images\navbar\logoGroot.png" />
     <Content Include="Images\navbar\logoMiddel.png" />
+    <Content Include="Images\voorpagina\boxIcons\ bell.png" />
+    <Content Include="Images\voorpagina\boxIcons\ cross.png" />
+    <Content Include="Images\voorpagina\boxIcons\ shield-ok.png" />
+    <Content Include="Images\voorpagina\Doctor.png" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="fonts\Lato\Muli-Regular.ttf" />
-    <Content Include="fonts\Muli\Lato-Bold.ttf" />
-    <Content Include="fonts\Lato\Muli-SemiBold.ttf" />
+    <Content Include="fonts\Muli\Muli-Regular.ttf" />
+    <Content Include="fonts\Lato\Lato-Bold.ttf" />
+    <Content Include="fonts\Muli\Muli-SemiBold.ttf" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -297,11 +311,6 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Patient\Create.cshtml" />
-    <Content Include="Views\Patient\Delete.cshtml" />
-    <Content Include="Views\Patient\Details.cshtml" />
-    <Content Include="Views\Patient\Edit.cshtml" />
-    <Content Include="Views\Patient\Index.cshtml" />
     <Content Include="Views\Afdeling\Create.cshtml" />
     <Content Include="Views\Afdeling\Delete.cshtml" />
     <Content Include="Views\Afdeling\Details.cshtml" />
@@ -322,6 +331,14 @@
     <Content Include="Views\Zorgverlener\Details.cshtml" />
     <Content Include="Views\Zorgverlener\Edit.cshtml" />
     <Content Include="Views\Zorgverlener\Index.cshtml" />
+    <Content Include="Views\Patient\Create.cshtml" />
+    <Content Include="Views\Patient\Delete.cshtml" />
+    <Content Include="Views\Patient\Details.cshtml" />
+    <Content Include="Views\Patient\Edit.cshtml" />
+    <Content Include="Views\Patient\Index.cshtml" />
+    <Content Include="Views\Patient\Interface.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Patient\DashboardPatient.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
