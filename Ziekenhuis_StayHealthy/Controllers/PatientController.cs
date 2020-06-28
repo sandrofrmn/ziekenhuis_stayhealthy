@@ -135,11 +135,32 @@ namespace Ziekenhuis_StayHealthy.Controllers
             base.Dispose(disposing);
         }
         
+        public ActionResult LampBedienen()
+        {
+            DomoticzAPI API = new DomoticzAPI();
+            int device = API.GetRoomDevices(2, "lamp");
+            API.ToggleSwitch(device);
+
+            return RedirectToAction("Interface", "Patient");
+        }
+
+        public ActionResult MediaPlayerBedienen()
+        {
+            DomoticzAPI API = new DomoticzAPI();
+            int device = API.GetRoomDevices(2, "media player");
+            API.ToggleSwitch(device);
+
+            return RedirectToAction("Interface", "Patient");
+        }
+
         public ActionResult GordijnenBedienen()
         {
             DomoticzAPI API = new DomoticzAPI();
-            API.TurnOn(1);
-            return RedirectToAction("Index","Home");
+            int device = API.GetRoomDevices(2, "gordijn");
+            API.ToggleSwitch(device);
+
+
+            return RedirectToAction("Interface","Patient");
         }
     }
 }
