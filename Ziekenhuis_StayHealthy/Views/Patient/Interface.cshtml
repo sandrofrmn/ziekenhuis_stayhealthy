@@ -6,8 +6,11 @@
 
 <link href="~/Content/Interface.css" rel="stylesheet" />
 
-<button>Gordijn</button>
+<input type="button" value="Gordijnen" onclick="location.href='@Url.Action("GordijnenBedienen", "Patient" )'" />
+<input type="button" name="test2" value="Gordijnen" onclick="GordijnenBedienen()">
 <button>Temperatuur</button>
 <button>Hulp roepen</button>
 
+@section Scripts{
 
+}

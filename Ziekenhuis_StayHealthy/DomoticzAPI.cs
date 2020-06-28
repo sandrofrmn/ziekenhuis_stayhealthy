@@ -50,7 +50,7 @@ namespace Ziekenhuis_StayHealthy
 
         public void TurnOn(int id)
         {
-            DomoticzHandler("/json.htm?type=command&param=switchlight&idx=" + id + "&switchcmd=On");
+            DomoticzHandler("http://127.0.0.1:8080/json.htm?type=command&param=switchlight&idx=" + id + "&switchcmd=On");
         }
     }
 }

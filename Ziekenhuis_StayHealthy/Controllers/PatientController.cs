@@ -134,6 +134,12 @@ namespace Ziekenhuis_StayHealthy.Controllers
             }
             base.Dispose(disposing);
         }
-
+        
+        public ActionResult GordijnenBedienen()
+        {
+            DomoticzAPI API = new DomoticzAPI();
+            API.TurnOn(1);
+            return RedirectToAction("Index","Home");
+        }
     }
 }
