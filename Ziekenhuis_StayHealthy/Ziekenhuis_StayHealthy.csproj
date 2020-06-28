@@ -249,6 +249,13 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\dashboardpatient\ alert-triangle.png" />
+    <Content Include="Images\dashboardpatient\ bread.png" />
+    <Content Include="Images\dashboardpatient\ flame.png" />
+    <Content Include="Images\dashboardpatient\ home.png" />
+    <Content Include="Images\dashboardpatient\ lightbulb.png" />
+    <Content Include="Images\dashboardpatient\ queue.png" />
+    <Content Include="Images\dashboardpatient\ user.png" />
     <Content Include="Images\loginpagina\background.jpg" />
     <Content Include="Images\loginpagina\background.png" />
     <Content Include="Images\loginpagina\backgroundSmall.png" />
