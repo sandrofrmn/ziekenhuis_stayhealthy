@@ -336,9 +336,9 @@
     <Content Include="Views\Patient\Details.cshtml" />
     <Content Include="Views\Patient\Edit.cshtml" />
     <Content Include="Views\Patient\Index.cshtml" />
-    <Content Include="Views\Patient\Interface.cshtml" />
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Patient\DashboardPatient.cshtml" />
+    <Content Include="Views\Patient\Interface.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

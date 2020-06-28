@@ -115,9 +115,10 @@ namespace Ziekenhuis_StayHealthy.Controllers
             return RedirectToAction("Index");
         }
 
+
         public ActionResult Interface()
         {
-            return View();
+            return View();  
         }
 
         public ActionResult DashboardPatient()
