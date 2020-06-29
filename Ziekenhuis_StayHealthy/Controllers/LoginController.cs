@@ -10,6 +10,8 @@ namespace Ziekenhuis_StayHealthy.Controllers
     public class LoginController : Controller
     {
         Patientnaam db = new Patientnaam();
+        public static int Patient_ID;
+        public static int Kamer_ID;
 
         // GET: Login
         public ActionResult Login()
@@ -20,24 +22,8 @@ namespace Ziekenhuis_StayHealthy.Controllers
         [HttpPost]
         public ActionResult Authorize(User user)
         {
-            int Patient_ID;
-            int Kamer_ID;
-            var patienten = db.Patient.ToList();
-            for(int i = 0; i <patienten.Count; i++)
-            {
-                System.Diagnostics.Debug.WriteLine(patienten[i].Voornaam);
-                if (patienten[i].Voornaam == user.name)
-                {
-                    Patient_ID = patienten[i].Kamer_ID.Value;
-                    System.Diagnostics.Debug.WriteLine(patienten[i].Voornaam);
-                    if (patienten[i].Kamer_ID != null)
-                    {
-                        Kamer_ID = patienten[i].Kamer_ID.Value;
-                        
-                    }
-                }
-            }
-            
+            (Patient_ID, Kamer_ID) = Logincheck(user);
+            //System.Diagnostics.Debug.WriteLine(Patient_ID);
 
             if (user.name == "admin" || user.name == "zorgverlener")
             {
@@ -55,6 +41,24 @@ namespace Ziekenhuis_StayHealthy.Controllers
         {
             Session.Abandon();
             return RedirectToAction("Index", "home");
+        }
+        
+        public (int, int) Logincheck(User user)
+        {
+            var patienten = db.Patient.ToList();
+            for (int i = 0; i < patienten.Count; i++)
+            {
+                if (patienten[i].Voornaam == user.name)
+                {
+                    Patient_ID = patienten[i].Patiënt_ID;
+                    if (patienten[i].Kamer_ID != null)
+                    {
+                        Kamer_ID = patienten[i].Kamer_ID.Value;                      
+                    }
+                }
+            }
+            System.Diagnostics.Debug.WriteLine(Kamer_ID);
+            return (Patient_ID, Kamer_ID);
         }
     }
 }
