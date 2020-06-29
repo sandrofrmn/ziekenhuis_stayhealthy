@@ -5,9 +5,12 @@
 }
 
 <link href="~/Content/Interface.css" rel="stylesheet" />
-
-<button>Gordijn</button>
+<input type="button" value="Lamp" onclick="location.href='@Url.Action("LampBedienen", "Patient" )'" />
+<input type="button" value="Media Player" onclick="location.href='@Url.Action("MediaPlayerBedienen", "Patient" )'" />
+<input type="button" value="Gordijnen" onclick="location.href='@Url.Action("GordijnenBedienen", "Patient" )'" />
 <button>Temperatuur</button>
 <button>Hulp roepen</button>
 
+@section Scripts{
 
+}
