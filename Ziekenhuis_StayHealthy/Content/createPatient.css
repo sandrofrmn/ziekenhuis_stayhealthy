@@ -1,0 +1,78 @@
+﻿@font-face {
+    font-family: 'Muli-Regular';
+    src: url('../fonts/Muli/Muli-Regular.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Muli-SemiBold';
+    src: url('../fonts/Muli/Muli-SemiBold.ttf') format('truetype');
+}
+
+body {      
+}
+
+.background {
+    position: absolute;
+    top: 100px;
+    background: #F3F9FC;
+}
+
+.wrapper-input {
+    position: fixed;
+    top: 10%;
+    left: 37%;
+}
+
+.wrapper-boxes{
+    margin-left: 100px; 
+}
+
+.create-title {
+    font-family: Muli-SemiBold;
+    font-size: 48px;
+    margin-top: 0;
+    margin-bottom: 10px;
+    color: #414546;
+}
+
+.box-desc {
+    font-size: 20px;
+    color: #737B7D;
+    font-weight: 500;   
+}
+
+.input-box {
+    margin-top: 5px;
+    position: initial;
+    background: #FFFFFF;
+    border: 1px solid #A9A7A7;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
+    text-align:center;
+}
+
+.button-back, .button-submit {
+    position: inherit;
+    margin-left: 2%;
+    margin-top: 2%;
+    font-family: Muli-SemiBold;
+    font-weight: 300;
+    font-size: 18px;
+    color: white;
+    width: 185px;
+    height: 48px;
+    background: radial-gradient(97.03% 401.52% at 98.65% 14.58%, #49B1EB 0%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%), #3C579B;
+    border-radius: 15px;
+}
+
+    .button-back:focus, .button-submit:focus {
+        outline: none
+    }
+
+    .button-back:hover, .button-submit:hover {
+        border-radius: 15px;
+        background-color: black;
+    }
