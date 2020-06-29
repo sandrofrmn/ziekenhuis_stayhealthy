@@ -200,6 +200,7 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\DashboardAdministratie.css" />
     <Content Include="Content\Interface.css" />
     <Content Include="Content\DashboardPatient.css" />
     <Content Include="Content\loginpagina.css" />
@@ -250,6 +251,10 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="Images\dashboardAdministratie\ clipboard-checked.png" />
+    <Content Include="Images\dashboardAdministratie\ cross.png" />
+    <Content Include="Images\dashboardAdministratie\ glasses.png" />
+    <Content Include="Images\dashboardAdministratie\circle-plus.png" />
     <Content Include="Images\dashboardpatient\ alert-triangle.png" />
     <Content Include="Images\dashboardpatient\ bread.png" />
     <Content Include="Images\dashboardpatient\ flame.png" />
@@ -347,6 +352,8 @@
     <Content Include="Views\Login\Login.cshtml" />
     <Content Include="Views\Patient\DashboardPatient.cshtml" />
     <Content Include="Views\Patient\Interface.cshtml" />
+    <Content Include="Views\Zorgverlener\DashboardZorgverlener.cshtml" />
+    <Content Include="Views\Home\DashboardAdministratie.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

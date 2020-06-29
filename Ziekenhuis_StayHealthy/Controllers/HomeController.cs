@@ -26,5 +26,10 @@ namespace Ziekenhuis_StayHealthy.Controllers
 
             return View();
         }
+
+        public ActionResult DashboardAdministratie()
+        {
+            return View();
+        }
     }
 }

@@ -115,6 +115,11 @@ namespace Ziekenhuis_StayHealthy.Controllers
             return RedirectToAction("Index");
         }
 
+        public ActionResult DashboardZorgverlener()
+        {
+            return View();
+        }
+
         protected override void Dispose(bool disposing)
         {
             if (disposing)

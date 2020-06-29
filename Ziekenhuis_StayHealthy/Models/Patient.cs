@@ -37,6 +37,5 @@ namespace Ziekenhuis_StayHealthy.Models
 
         public bool? Gearchiveerd { get; set; }
 
-        public int? Eten_ID { get; set; }
     }
 }

@@ -71,26 +71,13 @@
                     else if (Session["function"].ToString() == "admin")
                     {
                         <li>
-                            <a href="/home/Index">Dashboard</a>
+                            <a href="/home/DashboardAdministratie">Dashboard</a>
                         </li>
-                        <li>
-                            <a href="/Zorgverlener/Index">Zorgverleners</a>
-                        </li>
-                        <li>
-                            <a href="/patient/Index">Patiënten</a>
-                        </li>
-
                     }
                     else if (Session["function"].ToString() == "zorgverlener")
                     {
                         <li>
-                            <a href="/home/Index">Dashboard</a>
-                        </li>
-                        <li>
-                            <a href="/patient/Index">Patiënten</a>
-                        </li>
-                        <li>
-                            <a href="/medicatie/Index">Medicatie</a>
+                            <a href="/zorgverlener/DashboardZorgverlener">Dashboard</a>
                         </li>
                     }
                 </ul>

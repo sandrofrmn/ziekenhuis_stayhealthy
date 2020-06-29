@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "DashboardZorgverlener";
+    if (Session["function"] == null)
+    {
+        Response.Redirect("~/Home/Index");
+    }
+}
+
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link href="~/Content/DashboardPatient.css" rel="stylesheet" />
+    <link href="~/Content/DashboardAdministratie.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Dashboard-Zorgverlener</title>
+</head>
+<body>
+    <div class="box-container">
+        <button class="box" id="patienten-box" onclick="location.href='@Url.Action("Index", "Patient" )'">
+            <img src="~/Images/dashboardAdministratie/ clipboard-checked.png" class="box-logo" /><br />
+            Bekijk Patiënten
+        </button>
+        <button class="box" id="medicatie-box" onclick="location.href='@Url.Action("Index", "Medicatie" )'">
+            <img src="~/Images/dashboardAdministratie/ cross.png" class="box-logo" /><br />
+            Bekijk Medicatie
+        </button>
+        <button class="box" id="patienten2-box" onclick="location.href='@Url.Action("Create", "Patient" )'">
+            <img src="~/Images/dashboardAdministratie/circle-plus.png" class="box-logo" /><br />
+            Patiënten toevoegen
+        </button>
+        <button class="box" id="medicatie2-box" onclick="location.href='@Url.Action("Create", "Medicatie" )'">
+            <img src="~/Images/dashboardAdministratie/circle-plus.png" class="box-logo" /><br />
+            Medicatie toevoegen
+        </button>
+
+    </div>
+</body>
+</html>

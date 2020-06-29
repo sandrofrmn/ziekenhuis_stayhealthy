@@ -1,0 +1,27 @@
+﻿body {
+}
+
+#medicatie-box {
+    background: linear-gradient(231.58deg, rgba(255, 255, 255, 0.75) 0%, rgba(0, 0, 0, 0) 98.27%), #FF0000;
+}
+
+#medicatie2-box {
+    background: linear-gradient(231.58deg, rgba(255, 255, 255, 0.75) 0%, rgba(0, 0, 0, 0) 98.27%), #1BC0B6;
+}
+
+#patienten-box {
+    background: linear-gradient(231.58deg, rgba(255, 255, 255, 0.75) 0%, rgba(0, 0, 0, 0) 98.27%), #FF4D00;
+}
+
+#zorgverlener-box {
+    background: linear-gradient(231.58deg, rgba(255, 255, 255, 0.75) 0%, rgba(0, 0, 0, 0) 98.27%), #00FF19;
+}
+
+#zorgverlener2-box{
+    background: linear-gradient(231.58deg, rgba(255, 255, 255, 0.75) 0%, rgba(0, 0, 0, 0) 98.27%), #0E7118;
+
+}
+
+#patienten2-box {
+    background: linear-gradient(231.58deg, rgba(255, 255, 255, 0.75) 0%, rgba(0, 0, 0, 0) 98.27%), #AB1593; 
+}
