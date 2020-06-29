@@ -1,6 +1,13 @@
-﻿body {
+﻿@font-face {
+    font-family: 'Muli-Regular';
+    src: url('../fonts/Muli/Muli-Regular.ttf') format('truetype');
+}
+
+body {
     margin-left: 300px;
     margin-right: 300px;
+    font-family: Muli-Regular;
+    font-weight: 600;
 }
 
 .box-container {
@@ -20,12 +27,70 @@
     height: 200px;
     box-shadow: 5px 10px 10px rgba(0, 0, 0, 0.2);
     border-radius: 10px;
+    font-weight: 600;
+    font-size: 30px;
+    color: white;
+    border-width: 0px;
+    border: none;
+}
+
+    .box:hover{
+        -webkit-transform: scale(1.2);
+        transform: scale(1.2);
+        -webkit-transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+        transition-timing-function: cubic-bezier(0.47, 2.02, 0.31, -0.36);
+    }
+
+
+.box-logo {
+    margin-top: 20px;
+}
+
+.box-desc {
+    font-weight: 600;   
+}
+
+
+#gegevens-box {
     background: linear-gradient(231.58deg, rgba(255, 255, 255, 0.75) 0%, rgba(0, 0, 0, 0) 98.27%), #24FF00;
 }
 
-.box-desc{
-    font-size: 30px;
-    color: white;
+
+#licht-box {
+    background: linear-gradient(231.34deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%), #FFB800;
 }
 
 
+#gordijn-box {
+    background: linear-gradient(231.34deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%), #8F00FF;
+}
+
+
+#media-box {
+    background: linear-gradient(231.34deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%), #0500FF;
+}
+
+
+#eten-box {
+    background: linear-gradient(231.34deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%), #10C197;
+}
+
+
+#temperatuur-box {
+    background: linear-gradient(231.34deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%), #FF00A8;
+}
+
+
+#hulp-box {
+    background: linear-gradient(198.76deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #BF0000;
+    padding-right: 290px;
+    padding-left: 290px;    
+    font-weight: 600;   
+    font-size: 32px ;
+}
+
+    #hulp-box:hover {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+                

@@ -2,9 +2,9 @@
 
 @{
     ViewBag.Title = "DashboardPatient";
-    if (Session["function"].ToString() != "patient")
+   if (Session["function"] == null)
     {
-        Response.Redirect("~/Home/index");
+        Response.Redirect("~/Home/Index");
     }
 }
 
@@ -19,30 +19,38 @@
 
 <body>
     <div class="box-container">
-            <div class="box" id="gegevens-box">
-                <a class="box-desc">Mijn gegevens</a>
-            </div>
-            <div class="box" id="licht-box">
-                <a class="box-desc">Licht bedienen</a>
-            </div>
-            <div class="box" id="gordijn-box">
-                <a class="box-desc">Gordijnen bedienen</a>
-            </div>
-            <div class="box" id="media-box">
-                <a class="box-desc">Media bedienen</a>
-            </div>
-            <div class="box" id="eten-box">
-                <a class="box-desc">Eten aanvragen</a>
-            </div>
-            <div class="box" id="temperatuur-box">
-                <a class="box-desc">Hulp vragen</a>
-            </div>
+        <button class="box" id="gegevens-box">
+            <img src="~/Images/dashboardpatient/ user.png" class="box-logo" /><br />
+            Mijn gegevens
+        </button>
+        <button class="box" id="licht-box">
+            <img src="~/Images/dashboardpatient/ lightbulb.png" class="box-logo" /><br />
+            Licht bedienen
+        </button>
+        <button class="box" id="gordijn-box">
+            <img src="~/Images/dashboardpatient/ home.png" class="box-logo" /><br />
+            Gordijnen bedienen
+        </button>
+        <button class="box" id="media-box">
+            <img src="~/Images/dashboardpatient/ queue.png" class="box-logo" /><br />
+            Media bedienen
+        </button>
+        <button class="box" id="eten-box">
+            <img src="~/Images/dashboardpatient/ bread.png" class="box-logo" /><br />
+            Eten aanvragen
+        </button>
+        <button class="box" id="temperatuur-box">
+            <img src="~/Images/dashboardpatient/ flame.png" class="box-logo" /><br />
+            Temperatuur wijzigen
+        </button>
 
-        <div class="lower-box">
-
+        <div class="box" id="hulp-box">
+            <img src="~/Images/dashboardpatient/ alert-triangle.png" /> <br />
+            <a class="box-desc">Hulp vragen</a>
         </div>
-    </div>
 
+    </div>
+        
 </body>
 
 </html>
