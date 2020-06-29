@@ -25,21 +25,21 @@
                         <a href="/home/Index">Home</a>
                     </li>
                     @*
-                        Controle welke user is ingelogd + welke rol deze user heeft gekregen
-                        @if (Session["user"] != null)
-                        {
-                            <li>
+        Controle welke user is ingelogd + welke rol deze user heeft gekregen
+        @if (Session["user"] != null)
+        {
+            <li>
 
-                                <a>@Session["user"].ToString()</a>
-                            </li>
-                        }
+                <a>@Session["user"].ToString()</a>
+            </li>
+        }
 
-                        @if (Session["function"] != null)
-                        {
-                            <li>
+        @if (Session["function"] != null)
+        {
+            <li>
 
-                                <a>@Session["function"].ToString()</a>
-                            </li>
+                <a>@Session["function"].ToString()</a>
+            </li>
 
                     *@
                     @if (Session["function"] == null)
@@ -65,17 +65,32 @@
                         </li>
 
 
+
+
                     }
                     else if (Session["function"].ToString() == "admin")
                     {
                         <li>
                             <a href="/home/Index">Dashboard</a>
                         </li>
+                        <li>
+                            <a href="/Zorgverlener/Index">Zorgverleners</a>
+                        </li>
+                        <li>
+                            <a href="/patient/Index">Patiënten</a>
+                        </li>
+
                     }
                     else if (Session["function"].ToString() == "zorgverlener")
                     {
                         <li>
                             <a href="/home/Index">Dashboard</a>
+                        </li>
+                        <li>
+                            <a href="/patient/Index">Patiënten</a>
+                        </li>
+                        <li>
+                            <a href="/medicatie/Index">Medicatie</a>
                         </li>
                     }
                 </ul>
