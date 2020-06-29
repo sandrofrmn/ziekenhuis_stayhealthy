@@ -80,6 +80,25 @@ body {
     background: linear-gradient(231.34deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%), #FF00A8;
 }
 
+#temperatuur-box-lvl0 {
+    background: linear-gradient(231.34deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%), #FF00A8;
+    display: none;
+}
+
+#temperatuur-box-lvl1 {
+    background: linear-gradient(231.34deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%), #FF00A8;
+    display: none;
+}
+
+#temperatuur-box-lvl2 {
+    background: linear-gradient(231.34deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%), #FF00A8;
+    display: none;
+}
+
+#temperatuur-box-lvl3 {
+    background: linear-gradient(231.34deg, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%), #FF00A8;
+    display: none;
+}
 
 #hulp-box {
     background: linear-gradient(198.76deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0) 100%), #BF0000;

@@ -23,15 +23,15 @@
             <img src="~/Images/dashboardpatient/ user.png" class="box-logo" /><br />
             Mijn gegevens
         </button>
-        <button class="box" id="licht-box">
+        <button class="box" id="licht-box" onclick="location.href='@Url.Action("LampBedienen", "Patient" )'">
             <img src="~/Images/dashboardpatient/ lightbulb.png" class="box-logo" /><br />
             Licht bedienen
         </button>
-        <button class="box" id="gordijn-box">
+        <button class="box" id="gordijn-box" onclick="location.href='@Url.Action("GordijnenBedienen", "Patient" )'">
             <img src="~/Images/dashboardpatient/ home.png" class="box-logo" /><br />
             Gordijnen bedienen
         </button>
-        <button class="box" id="media-box">
+        <button class="box" id="media-box" onclick="location.href='@Url.Action("MediaPlayerBedienen", "Patient" )'">
             <img src="~/Images/dashboardpatient/ queue.png" class="box-logo" /><br />
             Media bedienen
         </button>
@@ -39,7 +39,7 @@
             <img src="~/Images/dashboardpatient/ bread.png" class="box-logo" /><br />
             Eten aanvragen
         </button>
-        <button class="box" id="temperatuur-box">
+        <button class="box" id="temperatuur-box" onclick="location.href='@Url.Action("TemperatuurBedienen", "Patient" )'">
             <img src="~/Images/dashboardpatient/ flame.png" class="box-logo" /><br />
             Temperatuur wijzigen
         </button>
@@ -54,6 +54,5 @@
 </body>
 
 </html>
-
 
 
