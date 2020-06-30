@@ -20,7 +20,7 @@
 <body>
     <div class="box-container">
         <button class="box" id="gegevens-box">
-            <img src="~/Images/dashboardpatient/ user.png" class="box-logo" /><br />
+            <img src="~/Images/dashboardpatient/ user.png" class="box-logo" onclick="location.href='@Url.Action("Details", "Patient" )'" /><br />
             Mijn gegevens
         </button>
         <button class="box" id="licht-box" onclick="location.href='@Url.Action("LampBedienen", "Patient" )'">
