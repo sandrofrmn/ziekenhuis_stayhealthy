@@ -1,0 +1,24 @@
+﻿body {
+
+}
+
+#eten{
+    top: 10%;
+    position: absolute;
+}
+
+.voorgerecht img{
+    width: 200px;
+    height: 200px;
+}
+
+
+.hoofdgerecht img{
+    width: 200px;
+    height: 200px
+}
+
+.nagerecht img{
+    width: 200px;
+    height: 200px;
+}

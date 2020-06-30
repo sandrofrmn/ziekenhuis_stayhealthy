@@ -39,5 +39,7 @@ namespace Ziekenhuis_StayHealthy.Models
         public System.Data.Entity.DbSet<Ziekenhuis_StayHealthy.Models.Medicatie> Medicaties { get; set; }
 
         public System.Data.Entity.DbSet<Ziekenhuis_StayHealthy.Models.Zorgverlener> Zorgverleners { get; set; }
+
+        public System.Data.Entity.DbSet<Ziekenhuis_StayHealthy.Models.Eten> Etens { get; set; }
     }
 }

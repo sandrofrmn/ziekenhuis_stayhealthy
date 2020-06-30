@@ -57,7 +57,6 @@ namespace Ziekenhuis_StayHealthy.Controllers
                     }
                 }
             }
-            System.Diagnostics.Debug.WriteLine(Kamer_ID);
             return (Patient_ID, Kamer_ID);
         }
     }

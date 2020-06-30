@@ -12,6 +12,7 @@ namespace Ziekenhuis_StayHealthy
     public class DomoticzAPI
     {
         List<string> devices = new List<string>();
+        List<string> deviceNames = new List<string>();
 
         public string DomoticzReturnText(string domoticz_URL)
         {
@@ -33,8 +34,26 @@ namespace Ziekenhuis_StayHealthy
             JObject j = JObject.Parse(text);
             for(int i = 0; i < 5; i++)
             {
-                devices.Add((string)j["result"][i]["idx"]);
+                //devices.Add((string)j["result"][i]["idx"].Where((string)j["result"][i]));
+                deviceNames.Add((string)j["result"][i]["Name"]);
+                System.Diagnostics.Debug.WriteLine(deviceNames[i]);
             }
+
+            for (int ii = 0; ii < 5; ii++)
+            {
+                if (deviceNames.Contains((string)j["result"][ii]["Name"])){
+                    devices.Add((string)j["result"][ii]["idx"]);
+                }
+                else
+                {
+                    System.Diagnostics.Debug.WriteLine("id " + ii + " niet gevonden");
+                }
+            }
+            for(int k=0; k<devices.Count(); k++)
+            {
+                System.Diagnostics.Debug.WriteLine(deviceNames[k]);
+            }
+            System.Diagnostics.Debug.WriteLine("------");
             return text;
         }
         public void DomoticzHandler(string domoticz_URL)

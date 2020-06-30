@@ -176,7 +176,7 @@ namespace Ziekenhuis_StayHealthy.Controllers
         public ActionResult TemperatuurBedienen()
         {
             DomoticzAPI API = new DomoticzAPI();
-            int device = API.GetRoomDevices(2, "temperatuur");
+            int device = API.GetRoomDevices(LoginController.Kamer_ID + 1, "temperatuur");
             API.KiesTemperatuur(device);
 
 
@@ -187,6 +187,7 @@ namespace Ziekenhuis_StayHealthy.Controllers
         {
             DomoticzAPI API = new DomoticzAPI();
             int device = API.GetRoomDevices(LoginController.Kamer_ID + 1, "gordijn");
+            
             API.ToggleSwitch(device);
 
 
