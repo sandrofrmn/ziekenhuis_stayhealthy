@@ -69,7 +69,14 @@
 
 
                 <div>
-                    <button class="button-back" onclick="location.href='@Url.Action("Index", "Patient" )'">Terug</button>
+                    @if (Session["function"].ToString() == "admin")
+                    {
+                        <button class="button-back" onclick="location.href='@Url.Action("DashboardAdministratie", "Home" )'">Terug</button>
+                    }
+                    else if (Session["function"].ToString() == "zorgverlener")
+                    {
+                        <button class="button-back" onclick="location.href='@Url.Action("DashboardZorgverlener", "Zorgverlener" )'">Terug</button>
+                    }
                 </div>
             </div>
         </div>

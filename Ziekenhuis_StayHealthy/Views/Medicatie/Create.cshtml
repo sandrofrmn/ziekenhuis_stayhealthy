@@ -45,7 +45,14 @@
             <input type="submit" value="Aanmaken" class="button-submit" />
 
             <div>
-                <button class="button-back" onclick="location.href='@Url.Action("Index", "Medicatie" )'">Terug</button>
+                @if (Session["function"].ToString() == "zorgverlener")
+                {
+                    <button class="button-back" onclick="location.href='@Url.Action("DashboardZorgverlener", "Zorgverlener" )'">Terug</button>
+                }
+                else
+                {
+                    <button class="button-back" onclick="location.href='@Url.Action("Index", "Medicatie" )'">Terug</button>
+                }
             </div>
         </div>
     </div>
