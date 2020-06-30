@@ -26,8 +26,13 @@ namespace Ziekenhuis_StayHealthy.Controllers
         {
             if (id == null)
             {
-                return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                id = LoginController.Patient_ID;
+                if (id == null)
+                {
+                    return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
+                }
             }
+            System.Diagnostics.Debug.WriteLine(id);
             Patient patient = db.Patients.Find(id);
             if (patient == null)
             {
@@ -139,7 +144,7 @@ namespace Ziekenhuis_StayHealthy.Controllers
         public ActionResult LampBedienen()
         {
             DomoticzAPI API = new DomoticzAPI();
-            int device = API.GetRoomDevices(2, "lamp");
+            int device = API.GetRoomDevices(LoginController.Kamer_ID + 1, "lamp");
             API.ToggleSwitch(device);
 
             return RedirectToAction("DashboardPatient", "Patient");
@@ -152,7 +157,7 @@ namespace Ziekenhuis_StayHealthy.Controllers
             SqlCommand cmd = new SqlCommand();
             */
             DomoticzAPI API = new DomoticzAPI();
-            int device = API.GetRoomDevices(2, "media player");
+            int device = API.GetRoomDevices(LoginController.Kamer_ID + 1, "media player");
             API.ToggleSwitch(device);
 
             return RedirectToAction("DashboardPatient", "Patient");
@@ -171,7 +176,7 @@ namespace Ziekenhuis_StayHealthy.Controllers
         public ActionResult GordijnenBedienen()
         {
             DomoticzAPI API = new DomoticzAPI();
-            int device = API.GetRoomDevices(2, "gordijn");
+            int device = API.GetRoomDevices(LoginController.Kamer_ID + 1, "gordijn");
             API.ToggleSwitch(device);
 
 
