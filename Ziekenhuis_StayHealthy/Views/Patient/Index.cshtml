@@ -5,6 +5,17 @@
 }
 
 <h2>Index</h2>
+<br />
+<br />
+<br />
+<br />
+<br />
+@using (Html.BeginForm("Index", "Patient", FormMethod.Get))
+{
+    <b>Zoeken op:</b> @Html.RadioButton("searchBy", "Huidige patiënten", true) <text>Huidige patiënten weergeven</text>
+    @Html.RadioButton("searchBy", "Alle patiënten") <text>Alle patiënten weergeven</text>
+    <input type="submit" value="Zoeken" />
+}
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -38,38 +49,39 @@
         <th></th>
     </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Voornaam)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Achternaam)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Adres)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Geboortedatum)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Telefoonnummer)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Afdeling_ID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Kamer_ID)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Gearchiveerd)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Patiënt_ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Patiënt_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Patiënt_ID })
-        </td>
-    </tr>
-}
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Voornaam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Achternaam)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Adres)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Geboortedatum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Telefoonnummer)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Afdeling_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Kamer_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Gearchiveerd)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = item.Patiënt_ID }) |
+                @Html.ActionLink("Details", "Details", new { id = item.Patiënt_ID }) |
+                @Html.ActionLink("Delete", "Delete", new { id = item.Patiënt_ID })
+            </td>
+        </tr>
+    }
 
 </table>

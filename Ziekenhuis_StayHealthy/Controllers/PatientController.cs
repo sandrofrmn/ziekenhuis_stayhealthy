@@ -16,9 +16,19 @@ namespace Ziekenhuis_StayHealthy.Controllers
         private ApplicationDbContext db = new ApplicationDbContext();
 
         // GET: Patient
-        public ActionResult Index()
+        public ActionResult Index(string searchBy)
         {
-            return View(db.Patients.ToList().Where(x => x.Gearchiveerd == false));
+            if (searchBy == "Huidige patiënten")
+            {
+                return View(db.Patients.ToList().Where(x => x.Gearchiveerd == false));
+            }
+            else if (searchBy == "Alle patiënten")
+            {
+                return View(db.Patients.ToList());
+            }
+
+            return View(db.Patients);
+
         }
 
         // GET: Patient/Details/5
