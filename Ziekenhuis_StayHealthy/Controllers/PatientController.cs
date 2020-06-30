@@ -18,7 +18,7 @@ namespace Ziekenhuis_StayHealthy.Controllers
         // GET: Patient
         public ActionResult Index()
         {
-            return View(db.Patients.ToList());
+            return View(db.Patients.ToList().Where(x => x.Gearchiveerd == false));
         }
 
         // GET: Patient/Details/5
