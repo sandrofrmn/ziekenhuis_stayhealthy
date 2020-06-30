@@ -2,6 +2,10 @@
 
 @{
     ViewBag.Title = "Interface";
+    if (Session["function"] == null)
+    {
+        Response.Redirect("~/Home/Index");
+    }
 }
 
 <link href="~/Content/Interface.css" rel="stylesheet" />

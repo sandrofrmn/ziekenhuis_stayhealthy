@@ -12,9 +12,10 @@ namespace Ziekenhuis_StayHealthy.Models
         [Key]
         public int Zorgverlener_ID { get; set; }
 
+        [Required]
         [StringLength(50)]
         public string Naam { get; set; }
-
+        [Required]
         [StringLength(50)]
         public string Functie { get; set; }
     }

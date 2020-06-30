@@ -2,55 +2,58 @@
 
 @{
     ViewBag.Title = "Delete";
+    var medicatieLetter = Model.Naam.First();
+    if (Session["function"] == null)
+    {
+        Response.Redirect("~/Home/Index");
+    }
 }
 
-<h2>Delete</h2>
+<link href="~/Content/deleteView.css" rel="stylesheet" />
 
-<h3>Are you sure you want to delete this?</h3>
-<div>
-    <h4>Medicatie</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Naam)
-        </dt>
 
-        <dd>
-            @Html.DisplayFor(model => model.Naam)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Merk)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Merk)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Dosis)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Dosis)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Patient_ID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Patient_ID)
-        </dd>
-
-    </dl>
-
-    @using (Html.BeginForm()) {
-        @Html.AntiForgeryToken()
-
-        <div class="form-actions no-color">
-            <input type="submit" value="Delete" class="btn btn-default" /> |
-            @Html.ActionLink("Back to List", "Index")
+<div class="wrapper-box">
+    <div class="wrapper-top">
+        <div class="user-eclipse">
+            @medicatieLetter
         </div>
-    }
+    </div>
+
+    <div class="wrapper-mid">
+        <h3 class="wrapper-title">verwijderen</h3>
+    </div> <br />
+
+    <div class="wrapper-info" style="width:450px">
+
+        <a class="text-label">Naam</a>
+        <div class="text-info">
+            @Html.DisplayFor(model => model.Naam)
+        </div>
+        <br />
+        <a class="text-label">Merk</a>
+        <div class="text-info">
+            @Html.DisplayFor(model => model.Merk)
+        </div>
+        <br />
+        <a class="text-label">Dosis</a>
+        <div class="text-info">
+            @Html.DisplayFor(model => model.Dosis)
+        </div>
+        <br />
+        <a class="text-label">Patient_ID</a>
+        <div class="text-info">@Html.DisplayFor(model => model.Patient_ID)</div>
+
+
+
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div>
+                <button class="button-submit" onclick="location.href='@Url.Action("Edit","Medicatie", new { id = Model.Medicatie_ID })'">Verwijderen</button>
+            </div>
+            <div>
+                <button class="button-back" onclick="location.href='@Url.Action("Index", "Medicatie" )'">Terug</button>
+            </div>
+        }
+    </div>
 </div>

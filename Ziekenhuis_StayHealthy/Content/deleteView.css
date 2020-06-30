@@ -4,7 +4,6 @@
 }
 
 body {
-
 }
 
 .wrapper-box {
@@ -22,7 +21,7 @@ body {
 .wrapper-top {
     background: #F3F9FC;
     width: 750px;
-    height: 150px;  
+    height: 150px;
 }
 
 .user-eclipse {
@@ -36,6 +35,19 @@ body {
     font-size: 64px;
     color: #4091DC;
     line-height: 128px;
+    text-align: center;
+}
+
+.input-box {
+    margin-top: 5px;
+    position: initial;
+    background: #FFFFFF;
+    border: 1px solid #A9A7A7;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    width: 200px;
+    height: 30px;
+    border-radius: 15px;
     text-align: center;
 }
 
@@ -57,22 +69,52 @@ body {
     color: #4091DC;
     font-size: 50px;
 }
-    
+
 .wrapper-info {
     position: absolute;
     left: 92px;
     top: 240px;
     padding-left: 50px;
-    padding-right: 50px;   
+    padding-right: 50px;
     font-size: 24px;
 }
 
-.text-label{
+.text-label {
     color: grey;
 }
 
-.text-info{
+.text-info {
     color: black;
     display: inline;
+    float: right;
+}
+
+.button-back, .button-submit {
+    margin-left: 2%;
+    margin-top: 2%;
+    font-family: Muli-SemiBold;
+    font-weight: 300;
+    font-size: 18px;
+    color: white;
+    width: 185px;
+    height: 48px;
+    background: radial-gradient(97.03% 401.52% at 98.65% 14.58%, #49B1EB 0%, rgba(255, 255, 255, 0) 100%, rgba(255, 255, 255, 0) 100%), #3C579B;
+    border-radius: 15px;
+}
+
+    .button-back:focus, .button-submit:focus {
+        outline: none
+    }
+
+    .button-back:hover, .button-submit:hover {
+        border-radius: 15px;
+        background-color: black;
+    }
+
+.button-back {
+    float: left;
+}
+
+.button-submit {
     float: right;
 }

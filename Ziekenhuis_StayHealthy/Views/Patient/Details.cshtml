@@ -2,39 +2,49 @@
 
 @{
     ViewBag.Title = "Details";
+    var userLetter = Model.Voornaam.First();
+    var shortDate = Model.Geboortedatum.ToShortDateString();
+    if (Session["function"] == null)
+    {
+        Response.Redirect("~/Home/Index");
+    }
 }
 
 <link href="~/Content/detailsPatient.css" rel="stylesheet" />
+<link href="~/Content/detailsView.css" rel="stylesheet" />
 
 <div class="wrapper-box">
     <div class="wrapper-top">
-        <div class="user-letter">
-
-        </div>
-    </div>
-    <div class="wrapper-mid">
-        <h3 class="create-title">Persoonlijke info</h3>
-    </div>
-    <div class="wrapper-info">
-        @Html.DisplayNameFor(model => model.Voornaam)
-        @Html.DisplayFor(model => model.Voornaam) <br />
-        @Html.DisplayNameFor(model => model.Achternaam)
-        @Html.DisplayFor(model => model.Achternaam)<br />
-        @Html.DisplayNameFor(model => model.Adres)
-        @Html.DisplayFor(model => model.Adres)<br />
-        @Html.DisplayNameFor(model => model.Geboortedatum)
-        @Html.DisplayFor(model => model.Geboortedatum)<br />
-        @Html.DisplayNameFor(model => model.Telefoonnummer)
-        @Html.DisplayFor(model => model.Telefoonnummer)<br />
-        @Html.DisplayNameFor(model => model.Afdeling_ID)
-        @Html.DisplayFor(model => model.Afdeling_ID)<br />
-        @Html.DisplayNameFor(model => model.Kamer_ID)
-        @Html.DisplayFor(model => model.Kamer_ID)<br />
-        @Html.DisplayNameFor(model => model.Gearchiveerd)
-        @Html.DisplayFor(model => model.Gearchiveerd)<br />
+        <div class="user-eclipse">
+            @userLetter
     </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Patiënt_ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>
+<div class="wrapper-mid">
+    <h3 class="wrapper-title">Persoonlijke info</h3>
+</div> <br />
+       <div class="wrapper-info" style="width:450px">
+           <a class="text-label">Voornaam</a>
+           <div class="text-info">@Html.DisplayFor(model => model.Voornaam)</div> <br />
+           <a class="text-label">Achternaam</a>
+           <div class="text-info">@Html.DisplayFor(model => model.Achternaam)</div><br />
+           <a class="text-label">Adres</a>
+           <div class="text-info">@Html.DisplayFor(model => model.Adres)</div><br />
+           <a class="text-label">Geboortedatum</a>
+           <div class="text-info">@shortDate</div><br />
+           <a class="text-label">Telefoonnummer</a>
+           <div class="text-info">@Html.DisplayFor(model => model.Telefoonnummer)</div><br />
+           <a class="text-label">Afdeling_ID</a>
+           <div class="text-info">@Html.DisplayFor(model => model.Afdeling_ID)</div><br />
+           <a class="text-label">Kamer_ID</a>
+           <div class="text-info">@Html.DisplayFor(model => model.Kamer_ID)</div><br />
+           <a class="text-label">Gearchiveerd</a>
+           <div class="text-info">@Html.DisplayFor(model => model.Gearchiveerd)</div><br />
+
+           <div>
+               <button class="button-submit" onclick="location.href='@Url.Action("Edit","Patient", new { id = Model.Patiënt_ID })'">Aanpassen</button>
+           </div>
+           <div>
+               <button class="button-back" onclick="location.href='@Url.Action("Index", "Patient" )'">Terug</button>
+           </div>
+       </div>
+</div>

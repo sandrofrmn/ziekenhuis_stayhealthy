@@ -2,33 +2,40 @@
 
 @{
     ViewBag.Title = "Details";
+    var firstLetter = Model.Naam.First();
+
+    if (Session["function"] == null)
+    {
+        Response.Redirect("~/Home/Index");
+    }
 }
 
-<h2>Details</h2>
+<link href="~/Content/detailsView.css" rel="stylesheet" />
 
-<div>
-    <h4>Zorgverlener</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Naam)
-        </dt>
+<div class="wrapper-box">
+    <div class="wrapper-top">
+        <div class="user-eclipse">
+            @firstLetter
+        </div>
+    </div>
+    <div class="wrapper-mid">
+        <h3 class="wrapper-title">Zorgverlener info</h3>
+    </div> <br />
 
-        <dd>
-            @Html.DisplayFor(model => model.Naam)
-        </dd>
+    <div class="wrapper-info" style="width: 450px">
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Functie)
-        </dt>
+        <a class="text-label">Naam</a>
+        <div class="text-info">@Html.DisplayFor(model => model.Naam)</div> <br />
 
-        <dd>
-            @Html.DisplayFor(model => model.Functie)
-        </dd>
+        <a class="text-label">Functie</a>
+        <div class="text-info">@Html.DisplayFor(model => model.Functie)</div><br />
+        <div>
+            <button class="button-submit" onclick="location.href='@Url.Action("Edit","Zorgverlener", new { id = Model.Zorgverlener_ID })'">Aanpassen</button>
+        </div>
+        <div>
+            <button class="button-back" onclick="location.href='@Url.Action("Index", "Zorgverlener" )'">Terug</button>
+        </div>
 
-    </dl>
+
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Zorgverlener_ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

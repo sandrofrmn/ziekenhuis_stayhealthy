@@ -2,49 +2,45 @@
 
 @{
     ViewBag.Title = "Details";
+
+    var firstLetter = Model.Naam.First();
+    if (Session["function"] == null)
+    {
+        Response.Redirect("~/Home/Index");
+    }
 }
 
-<h2>Details</h2>
+<link href="~/Content/detailsView.css" rel="stylesheet" />
 
-<div>
-    <h4>Medicatie</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Naam)
-        </dt>
+<div class="wrapper-box">
+    <div class="wrapper-top">
+        <div class="user-eclipse">
+            @firstLetter
+        </div>
+    </div>
+    <div class="wrapper-mid">
+        <h3 class="wrapper-title">Medicatie info</h3>
+    </div> <br />
 
-        <dd>
-            @Html.DisplayFor(model => model.Naam)
-        </dd>
+           <div class="wrapper-info" style="width:450px">
+               <a class="text-label">Naam</a>
+               <div class="text-info">@Html.DisplayFor(model => model.Naam)</div>
+               <br />
+               <a class="text-label">Merk</a>
+               <div class="text-info">@Html.DisplayFor(model => model.Merk)</div>
+               <br />
+               <a class="text-label">Dosis</a>
+               <div class="text-info">@Html.DisplayFor(model => model.Dosis)</div>
+               <br />
+               <a class="text-label">Patient_ID</a>
+               <div class="text-info">@Html.DisplayFor(model => model.Patient_ID)</div>
+               <br />
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Merk)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Merk)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Dosis)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Dosis)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Patient_ID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Patient_ID)
-        </dd>
-
-    </dl>
+               <div>
+                   <button class="button-submit" onclick="location.href='@Url.Action("Edit","Medicatie", new { id = Model.Medicatie_ID })'">Aanpassen</button>
+               </div>
+               <div>
+                   <button class="button-back" onclick="location.href='@Url.Action("Index", "Medicatie" )'">Terug</button>
+               </div>
+           </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.Medicatie_ID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

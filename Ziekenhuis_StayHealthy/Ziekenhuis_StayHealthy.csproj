@@ -200,8 +200,11 @@
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
-    <Content Include="Content\createPatient.css" />
+    <Content Include="Content\createView.css" />
     <Content Include="Content\DashboardAdministratie.css" />
+    <Content Include="Content\deleteView.css" />
+    <Content Include="Content\detailsView.css" />
+    <Content Include="Content\editView.css" />
     <Content Include="Content\Interface.css" />
     <Content Include="Content\DashboardPatient.css" />
     <Content Include="Content\loginpagina.css" />

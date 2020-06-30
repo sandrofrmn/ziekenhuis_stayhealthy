@@ -2,9 +2,13 @@
 
 @{
     ViewBag.Title = "Create";
+    if (Session["function"] == null)
+    {
+        Response.Redirect("~/Home/Index");
+    }
 }
 
-<link href="~/Content/createPatient.css" rel="stylesheet" />
+<link href="~/Content/createView.css" rel="stylesheet" />
 <div class="background">
     @using (Html.BeginForm())
     {
