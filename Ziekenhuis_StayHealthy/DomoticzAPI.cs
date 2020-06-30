@@ -66,6 +66,27 @@ namespace Ziekenhuis_StayHealthy
             }
         }
 
+        public void KiesTemperatuur(int id)
+        {
+            string output = DomoticzReturnText(("http://127.0.0.1:8080/json.htm?type=devices&rid=" + id));
+            if (output.Contains(@"""Status"" : ""Off"))
+            {
+                DomoticzHandler("http://127.0.0.1:8080/json.htm?type=command&param=udevice&idx=" + id + "&nvalue=2&svalue=10");
+            }
+            else if (output.Contains(@"""Status"" : ""Set Level: 10 %"))
+            {
+                DomoticzHandler("http://127.0.0.1:8080/json.htm?type=command&param=udevice&idx=" + id + "&nvalue=2&svalue=20");
+            } 
+            else if (output.Contains(@"""Status"" : ""Set Level: 20 %"))
+            {
+                DomoticzHandler("http://127.0.0.1:8080/json.htm?type=command&param=udevice&idx=" + id + "&nvalue=2%&svalue=30");
+            }
+            else
+            {
+                DomoticzHandler("http://127.0.0.1:8080/json.htm?type=command&param=udevice&idx=" + id + "&nvalue=2&svalue=0");
+            }
+        }
+
         public void TurnOn(int id)
         {
             DomoticzHandler("http://127.0.0.1:8080/json.htm?type=command&param=switchlight&idx=" + id + "&switchcmd=On");
@@ -75,6 +96,10 @@ namespace Ziekenhuis_StayHealthy
         {
             int number = 0;
             DomoticzChecker("http://127.0.0.1:8080/json.htm?type=command&param=getplandevices&idx=" + roomID);
+            if (device == "temperatuur")
+            {
+                number = 1;
+            }
             if (device == "media player")
             {
                 number = 2;

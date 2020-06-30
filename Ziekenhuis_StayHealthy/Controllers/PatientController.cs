@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Data;
 using System.Data.Entity;
+using System.Data.SqlClient;
 using System.Linq;
 using System.Net;
 using System.Web;
@@ -141,16 +142,30 @@ namespace Ziekenhuis_StayHealthy.Controllers
             int device = API.GetRoomDevices(2, "lamp");
             API.ToggleSwitch(device);
 
-            return RedirectToAction("Interface", "Patient");
+            return RedirectToAction("DashboardPatient", "Patient");
         }
 
         public ActionResult MediaPlayerBedienen()
         {
+            /*
+            SqlConnection conn = new SqlConnection();
+            SqlCommand cmd = new SqlCommand();
+            */
             DomoticzAPI API = new DomoticzAPI();
             int device = API.GetRoomDevices(2, "media player");
             API.ToggleSwitch(device);
 
-            return RedirectToAction("Interface", "Patient");
+            return RedirectToAction("DashboardPatient", "Patient");
+        }
+
+        public ActionResult TemperatuurBedienen()
+        {
+            DomoticzAPI API = new DomoticzAPI();
+            int device = API.GetRoomDevices(2, "temperatuur");
+            API.KiesTemperatuur(device);
+
+
+            return RedirectToAction("DashboardPatient", "Patient");
         }
 
         public ActionResult GordijnenBedienen()
@@ -160,7 +175,7 @@ namespace Ziekenhuis_StayHealthy.Controllers
             API.ToggleSwitch(device);
 
 
-            return RedirectToAction("Interface","Patient");
+            return RedirectToAction("DashboardPatient", "Patient");
         }
     }
 }

@@ -101,7 +101,6 @@ C:\Users\imsan\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\bi
 C:\Users\imsan\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\imsan\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\imsan\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\imsan\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\obj\Debug\Ziekenhuis_StayHealthy.csprojAssemblyReference.cache
 C:\Users\imsan\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\obj\Debug\Ziekenhuis_StayHealthy.csproj.CoreCompileInputs.cache
 C:\Users\imsan\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\obj\Debug\Ziekenhuis_StayHealthy.csproj.CopyComplete
 C:\Users\imsan\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\obj\Debug\Ziekenhuis_StayHealthy.dll
@@ -321,3 +320,4 @@ C:\Users\gebruiker\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealth
 C:\Users\gebruiker\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\obj\Debug\Ziekenhuis_StayHealthy.csproj.CopyComplete
 C:\Users\gebruiker\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\obj\Debug\Ziekenhuis_StayHealthy.dll
 C:\Users\gebruiker\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\obj\Debug\Ziekenhuis_StayHealthy.pdb
+C:\Users\imsan\Documents\GitHub\ziekenhuis_stayhealthy\Ziekenhuis_StayHealthy\obj\Debug\Ziekenhuis_StayHealthy.csprojAssemblyReference.cache
