@@ -4,77 +4,35 @@
     ViewBag.Title = "Details";
 }
 
-<h2>Details</h2>
+<link href="~/Content/detailsPatient.css" rel="stylesheet" />
 
-<div>
-    <h4>Patient</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Voornaam)
-        </dt>
+<div class="wrapper-box">
+    <div class="wrapper-top">
+        <div class="user-letter">
 
-        <dd>
-            @Html.DisplayFor(model => model.Voornaam)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Achternaam)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Achternaam)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Adres)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Adres)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Geboortedatum)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Geboortedatum)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Telefoonnummer)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Telefoonnummer)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Afdeling_ID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Afdeling_ID)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Kamer_ID)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Kamer_ID)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Gearchiveerd)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Gearchiveerd)
-        </dd>
-
-    </dl>
+        </div>
+    </div>
+    <div class="wrapper-mid">
+        <h3 class="create-title">Persoonlijke info</h3>
+    </div>
+    <div class="wrapper-info">
+        @Html.DisplayNameFor(model => model.Voornaam)
+        @Html.DisplayFor(model => model.Voornaam) <br />
+        @Html.DisplayNameFor(model => model.Achternaam)
+        @Html.DisplayFor(model => model.Achternaam)<br />
+        @Html.DisplayNameFor(model => model.Adres)
+        @Html.DisplayFor(model => model.Adres)<br />
+        @Html.DisplayNameFor(model => model.Geboortedatum)
+        @Html.DisplayFor(model => model.Geboortedatum)<br />
+        @Html.DisplayNameFor(model => model.Telefoonnummer)
+        @Html.DisplayFor(model => model.Telefoonnummer)<br />
+        @Html.DisplayNameFor(model => model.Afdeling_ID)
+        @Html.DisplayFor(model => model.Afdeling_ID)<br />
+        @Html.DisplayNameFor(model => model.Kamer_ID)
+        @Html.DisplayFor(model => model.Kamer_ID)<br />
+        @Html.DisplayNameFor(model => model.Gearchiveerd)
+        @Html.DisplayFor(model => model.Gearchiveerd)<br />
+    </div>
 </div>
 <p>
     @Html.ActionLink("Edit", "Edit", new { id = Model.Patiënt_ID }) |
