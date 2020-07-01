@@ -7,37 +7,42 @@
         Response.Redirect("~/Home/Index");
     }
 }
+    <link href="~/Content/indexView.css" rel="stylesheet" />
 
-<h2>Index</h2>
+    <div class="background">
+        <div class="wrapper-index">
+            <div class="wrapper-top"><h2>Index</h2></div>
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Naam)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Functie)
-        </th>
-        <th></th>
-    </tr>
+            <div class="wrapper-table">
+                <table class="table">
+                    <tr>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Naam)
+                        </th>
+                        <th>
+                            @Html.DisplayNameFor(model => model.Functie)
+                        </th>
+                        <th>Acties</th>
+                    </tr>
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Naam)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.Functie)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.Zorgverlener_ID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.Zorgverlener_ID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.Zorgverlener_ID })
-        </td>
-    </tr>
-}
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Naam)
+                            </td>
+                            <td>
+                                @Html.DisplayFor(modelItem => item.Functie)
+                            </td>
+                            <td>
+                                @Html.ActionLink("Edit", "Edit", new { id = item.Zorgverlener_ID }) |
+                                @Html.ActionLink("Details", "Details", new { id = item.Zorgverlener_ID }) |
+                                @Html.ActionLink("Delete", "Delete", new { id = item.Zorgverlener_ID })
+                            </td>
+                        </tr>
+                    }
 
-</table>
+                </table>
+            </div>
+        </div>
+    </div>

@@ -40,11 +40,21 @@
            <a class="text-label">Gearchiveerd</a>
            <div class="text-info">@Html.DisplayFor(model => model.Gearchiveerd)</div><br />
 
-           <div>
-               <button class="button-submit" onclick="location.href='@Url.Action("Edit","Patient", new { id = Model.Patiënt_ID })'">Aanpassen</button>
-           </div>
-           <div>
-               <button class="button-back" onclick="location.href='@Url.Action("Index", "Patient" )'">Terug</button>
-           </div>
+           @if (Session["function"].ToString() != "patient")
+           {
+               <div>
+                   <button class="button-submit" onclick="location.href='@Url.Action("Edit","Patient", new { id = Model.Patiënt_ID })'">Aanpassen</button>
+               </div>
+
+               <div>
+                   <button class="button-back" onclick="location.href='@Url.Action("Index", "Patient" )'">Terug</button>
+               </div>
+           }
+           else
+           {
+               <div>
+                   <button class="button-back" onclick="location.href='@Url.Action("DashboardPatient", "Patient" )'">Terug</button>
+               </div>
+           }
        </div>
 </div>
