@@ -171,6 +171,7 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\AfdelingController.cs" />
+    <Compile Include="Controllers\EtenController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\KamerController.cs" />
     <Compile Include="Controllers\LoginController.cs" />
@@ -184,6 +185,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Afdeling.cs" />
+    <Compile Include="Models\Eten.cs" />
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\Kamer.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
@@ -205,6 +207,7 @@
     <Content Include="Content\deleteView.css" />
     <Content Include="Content\detailsView.css" />
     <Content Include="Content\editView.css" />
+    <Content Include="Content\eten.css" />
     <Content Include="Content\Interface.css" />
     <Content Include="Content\DashboardPatient.css" />
     <Content Include="Content\loginpagina.css" />
@@ -266,6 +269,34 @@
     <Content Include="Images\dashboardpatient\ lightbulb.png" />
     <Content Include="Images\dashboardpatient\ queue.png" />
     <Content Include="Images\dashboardpatient\ user.png" />
+    <Content Include="Images\etenimages\biefstuk.jpg" />
+    <Content Include="Images\etenimages\boterhamworst.png" />
+    <Content Include="Images\etenimages\Caesar-Salad.jpg" />
+    <Content Include="Images\etenimages\chocoladesaus.png" />
+    <Content Include="Images\etenimages\cocktailsaus.png" />
+    <Content Include="Images\etenimages\droogbrood.jpg" />
+    <Content Include="Images\etenimages\friet.jpg" />
+    <Content Include="Images\etenimages\frikandellenbroodje.jpg" />
+    <Content Include="Images\etenimages\geitenmelk.jpg" />
+    <Content Include="Images\etenimages\gemeentepils.jpg" />
+    <Content Include="Images\etenimages\groentesoep.jpg" />
+    <Content Include="Images\etenimages\kaas.jpg" />
+    <Content Include="Images\etenimages\kapsalon.jpg" />
+    <Content Include="Images\etenimages\ketchup.jpg" />
+    <Content Include="Images\etenimages\kip-gegrild.jpg" />
+    <Content Include="Images\etenimages\knoflooksaus.jpg" />
+    <Content Include="Images\etenimages\koeienmelk.jpg" />
+    <Content Include="Images\etenimages\mayonnaise.jpg" />
+    <Content Include="Images\etenimages\McNuggets.jpg" />
+    <Content Include="Images\etenimages\nutella.jpg" />
+    <Content Include="Images\etenimages\pindakaas.jpg" />
+    <Content Include="Images\etenimages\rijst.jpg" />
+    <Content Include="Images\etenimages\Spaghetti-Bolognese.jpg" />
+    <Content Include="Images\etenimages\tomatensoep.jpg" />
+    <Content Include="Images\etenimages\vanille_ijs.jpg" />
+    <Content Include="Images\etenimages\verse-jus-dorange.jpg" />
+    <Content Include="Images\etenimages\warnecke_special_XL.png" />
+    <Content Include="Images\etenimages\wortelsap.jpg" />
     <Content Include="Images\loginpagina\background.jpg" />
     <Content Include="Images\loginpagina\background.png" />
     <Content Include="Images\loginpagina\backgroundSmall.png" />
@@ -281,6 +312,7 @@
     <Content Include="fonts\Muli\Muli-Regular.ttf" />
     <Content Include="fonts\Lato\Lato-Bold.ttf" />
     <Content Include="fonts\Muli\Muli-SemiBold.ttf" />
+    <Content Include="Images\etenimages\zoetzure saus.webp" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />
@@ -358,6 +390,7 @@
     <Content Include="Views\Patient\Interface.cshtml" />
     <Content Include="Views\Zorgverlener\DashboardZorgverlener.cshtml" />
     <Content Include="Views\Home\DashboardAdministratie.cshtml" />
+    <Content Include="Views\Eten\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

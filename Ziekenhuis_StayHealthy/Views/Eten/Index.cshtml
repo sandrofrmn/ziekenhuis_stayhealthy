@@ -1,0 +1,74 @@
+﻿<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+    <link href="~/Content/eten.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="eten">
+        <h2>Voorgerecht</h2>
+        <div class="voorgerecht">
+            <img src="~/Images/etenimages/tomatensoep.jpg" class="voorgerecht" id="tomatensoep" />
+            <img src="~/Images/etenimages/groentesoep.jpg" class="voorgerecht" id="groentensoep" />
+            <img src="~/Images/etenimages/droogbrood.jpg" class="voorgerecht" />
+            <img src="~/Images/etenimages/kaas.jpg" class="voorgerecht" />
+            <img src="~/Images/etenimages/boterhamworst.png" class="voorgerecht" id="boterhamworst" />
+            <img src="~/Images/etenimages/geitenmelk.jpg" class="voorgerecht" />
+            <img src="~/Images/etenimages/koeienmelk.jpg" class="voorgerecht" />
+            <img src="~/Images/etenimages/Caesar-Salad.jpg" class="voorgerecht" />
+            <img src="~/Images/etenimages/wortelsap.jpg" class="voorgerecht" />
+            <img src="~/Images/etenimages/verse-jus-dorange.jpg" class="voorgerecht" />
+            <img src="~/Images/etenimages/nutella.jpg" class="voorgerecht" />
+            <img src="~/Images/etenimages/pindakaas.jpg" class="voorgerecht" />
+            <img src="~/Images/etenimages/gemeentepils.jpg" class="voorgerecht" />
+        </div>
+        <br />
+        <br />
+        <h2>Hoofdgerecht</h2>
+        <div class="hoofdgerecht">
+            <img src="~/Images/etenimages/kapsalon.jpg" />
+            <img src="~/Images/etenimages/friet.jpg" />
+            <img src="~/Images/etenimages/cocktailsaus.png" />
+            <img src="~/Images/etenimages/knoflooksaus.jpg" />
+            <img src="~/Images/etenimages/mayonnaise.jpg" />
+            <img src="~/Images/etenimages/ketchup.jpg" />
+            <img src="~/Images/etenimages/rijst.jpg" />
+            <img src="~/Images/etenimages/kip-gegrild.jpg" />
+            <img src="~/Images/etenimages/biefstuk.jpg" />
+            <img src="~/Images/etenimages/Spaghetti-Bolognese.jpg" />
+            <img src="~/Images/etenimages/McNuggets.jpg" />
+            <img src="~/Images/etenimages/frikandellenbroodje.jpg" />
+            <img src="~/Images/etenimages/warnecke_special_XL.png" />
+        </div>
+        <h2>Nagerecht</h2>
+        <div class="nagerecht">
+            <img src="~/Images/etenimages/vanille_ijs.jpg" />
+            <img src="~/Images/etenimages/chocoladesaus.png" />
+        </div>
+    </div>
+    
+</body>
+</html>
+
+@section Scripts{
+    <script>
+        $(document).ready(function () {
+            $('.voorgerecht').mouseenter(function () {
+                $(this).animate({
+                    opacity: 0.6,
+                    borderradius: '40px'
+                });
+            });
+            $('.voorgerecht').mouseleave(function () {
+                $(this).animate({
+                    opacity: 1,
+                    borderradius: '0px'
+                });
+            });
+        });
+
+
+    </script>
+} 
